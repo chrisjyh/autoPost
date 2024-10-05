@@ -1,0 +1,2 @@
+cookies = {}
+cookies_pin = {}
