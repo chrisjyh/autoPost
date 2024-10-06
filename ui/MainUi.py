@@ -2,9 +2,6 @@ import time
 
 from PyQt5 import QtWidgets, QtCore, QtGui
 
-from PostUtil.NaverPost import NaverPost
-from PostUtil.PinterPost import PinterPost
-
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -106,28 +103,22 @@ class Ui_Form(object):
 
 
     def naver_start(self):
-        naverPost = NaverPost(self.naver_id.text(), self.naver_pw.text())
+        # naverPost = NaverPost(self.naver_id.text(), self.naver_pw.text())
         print(f"입력내용 {self.naver_id.text()} pw: {self.naver_pw.text()}")
         urls = [i for i in self.textEdit.toPlainText().split("\n") if "http" in i]
-        naverPost.blog(urls)
+        # naverPost.blog(urls)
 
     def post_start(self):
-        naverPost = NaverPost(self.naver_id.text(), self.naver_pw.text())
+        # naverPost = NaverPost(self.naver_id.text(), self.naver_pw.text())
         urls = [i for i in self.textEdit.toPlainText().split("\n") if "http" in i]
-        naverPost.post(urls)
+        # naverPost.post(urls)
 
     def pin_start(self):
-        pinterPost = PinterPost(self.pin_id.text(), self.pin_pw.text())
+        # pinterPost = PinterPost(self.pin_id.text(), self.pin_pw.text())
         urls = [i for i in self.textEdit.toPlainText().split("\n") if "http" in i]
-        pinterPost.pinterest(urls)
+        # pinterPost.pinterest(urls)
 
     def start(self):
-        naverPost = NaverPost(self.naver_id.text(), self.naver_pw.text())
-        pinterPost = PinterPost(self.pin_id.text(), self.pin_pw.text())
-
-        urls = [i for i in self.textEdit.toPlainText().split("\n") if "http" in i]
-        naverPost.blog(urls)
-        time.sleep(1)
-        naverPost.post(urls)
-        time.sleep(1)
-        pinterPost.pinterest(urls)
+        # naverPost = NaverPost(self.naver_id.text(), self.naver_pw.text())
+        # pinterPost = PinterPost(self.pin_id.text(), self.pin_pw.text())
+        print("start")
